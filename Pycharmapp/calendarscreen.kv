@@ -1,0 +1,65 @@
+<CalendarScreen>:
+    BoxLayout:  # ✅ Use BoxLayout for structured vertical layout
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+
+        canvas.before:
+            Color:
+                rgb: get_color_from_hex("#39B3F2")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        # --- Title Section ---
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                id: title_label
+                text: "Exercise Progress - " + root.current_month
+                font_size: 22
+                bold: True
+                color: 1, 1, 1, 1
+
+        # --- Navigation Buttons ---
+        BoxLayout:
+            size_hint_y: 0.1
+            spacing: 10
+            Button:
+                text: "<"
+                font_size: 20
+                size_hint_x: 0.2
+                background_normal: ""
+                background_color: 1, 1, 1, 1
+                color: 0, 0, 0, 1
+                on_press: root.change_month(-1)
+
+            Label:
+                text: root.current_month
+                font_size: 22
+                bold: True
+                color: 1, 1, 1, 1
+
+            Button:
+                text: ">"
+                font_size: 20
+                size_hint_x: 0.2
+                background_normal: ""
+                background_color: 1, 1, 1, 1
+                color: 0, 0, 0, 1
+                on_press: root.change_month(1)
+
+        # --- Calendar Grid ---
+        GridLayout:
+            id: calendar_grid
+            cols: 7
+            spacing: 5
+            size_hint_y: 0.7
+
+        # --- Back Button ---
+
+        Button:
+            size_hint: 0.3, 0.2
+            pos_hint: {"center_x": 0.9, "top": 0.1}
+            background_normal: "icons/back.png"
+            on_press: app.root.current = "main_screen"

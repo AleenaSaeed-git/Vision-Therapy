@@ -1,0 +1,63 @@
+<ClickableGrid@ButtonBehavior+GridLayout>:
+    rows: 1
+    canvas.before:
+        Color:
+            rgb: utils.get_color_from_hex("#35477d") if self.state == 'normal' else utils.get_color_from_hex("#6C5B7B")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<SettingsScreen>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex("#35477d")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#35477d")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        # --- Notification Settings ---
+        ClickableGrid:
+            size_hint: .8, .1
+            pos_hint: {"top": .8, "right": .8}
+            on_release: app.change_screen("notification_screen", "right", "push")
+
+            Image:
+                source: "icons/Notification.png"
+            Label:
+                text: "[u]Customize Notification Time[/u]"
+                markup: True
+
+        # --- Exercise Timer Settings ---
+        ClickableGrid:
+            size_hint: .8, .1
+            pos_hint: {"top": .6, "right": .8}
+            id: exercise_duration_input
+            on_release: root.show_timer_popup()
+
+            Image:
+                source: "icons/timer2.png"
+            Label:
+                text: "[u]Customize Exercise Timings [/u]"
+                markup: True
+
+        # --- Display Current Timer Duration ---
+        Label:
+            id: current_timer
+            text: "Current Duration: Loading..."
+            pos_hint: {"center_x": 0.5, "top": 0.9}
+            font_size: 18
+
+        # --- Back Button ---
+        Button:
+            size_hint: 0.3, 0.1
+            pos_hint: {"center_x": 0.5, "top": 0.3}
+            background_normal: "icons/back.png"
+            on_press: app.root.current = "main_screen"

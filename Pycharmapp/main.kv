@@ -1,0 +1,83 @@
+#:include kv/MainScreen.kv
+#:include kv/settingsscreen.kv
+#:include kv/loginscreen.kv
+#:include kv/exercisescreen.kv
+
+
+GridLayout:
+    cols: 1
+    FloatLayout:
+        GridLayout:
+            canvas:
+                Color:
+                    rgb: get_color_from_hex("#39B3F2")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            #put two W icons here
+            rows:1
+            pos_hint:{"top":1,"left":1}
+            size_hint:1,.05
+            Image:
+                source: "icons/eyeball.png"
+            Image:
+                source: "icons/eyeglass.png"
+
+        FloatLayout:
+            canvas:
+                Color:
+                    rgb: get_color_from_hex("#39B3F2")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            rows:1
+            pos_hint:{"top":.95,"left":1}
+            size_hint:1,.15
+            #put two W icons and avatar icon
+            Image:
+                source: "icons/eyegym.png"
+                size_hint: 0.25, 0.5
+                pos_hint: {"top": 1,"right": 0.25}
+            Image:
+                source: "icons/mideye.png"
+                size_hint: 0.5, 1
+                pos_hint: {"top": 1,"right": 0.75}
+                id: avatar_image
+            Image:
+                source: "icons/happyeye.png"
+                size_hint: 0.25, 0.5
+                pos_hint: {"top": 1,"right": 1}
+    ScreenManager:
+        ScreenManager:
+            size_hint: 1, 0.699
+            pos_hint: {"top": .799, "left": 1}
+            id: screen_manager
+            LoginScreen:
+                name: "login_screen"
+                id: login_screen
+            MainScreen:
+                name: "main_screen"
+                id: main_screen
+            SettingsScreen:
+                name: "settings_screen"
+                id: settings_screen
+            ChangeAvatarScreen:
+                name: "change_avatar_screen"
+                id: change_avatar_screen
+            ExerciseScreen:
+                name: "exercise_screen"
+                id: exercise_screen
+            NotificationScreen:
+                name:"notification_screen"
+                id: notification_screen
+
+        Widget:
+            size_hint: 1, .1
+            pos_hint: {"top": .1, "right": 1}
+            canvas:
+                Color:
+                    rgb: get_color_from_hex("#35477d")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+

@@ -1,0 +1,37 @@
+<NotificationScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#35477d")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: "Set Reminder Time (HH:MM)"
+            pos_hint: {"center_x": 0.5, "top": 0.9}
+            font_size: 22
+            color: 1, 1, 1, 1
+
+        GridLayout:
+            cols: 2
+            rows: 1
+            size_hint: 0.8, 0.1
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            spacing: 10
+
+            TextInput:
+                id: reminder_time
+                hint_text: "e.g. 08:10"
+                size_hint_x: 0.7
+                multiline: False
+
+            Button:
+                text: "Save"
+                size_hint_x: 0.3
+                on_press: root.set_fcm_reminder()
+        Button:
+            size_hint: 0.3, 0.2
+            pos_hint: {"center_x": 0.9, "top": 0.2}
+            background_normal: "icons/back.png"
+            on_press: app.root.current = "main_screen"

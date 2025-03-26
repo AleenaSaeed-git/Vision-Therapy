@@ -1,0 +1,57 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<LoginScreen>:
+    canvas.before:
+        Color:
+            rgb: get_color_from_hex("#35477d")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: get_color_from_hex("#35477d")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        TextInput:
+            id: login_email
+            hint_text: "Email"
+            size_hint: .8, .1
+            pos_hint: {"top": .9, "right" :.9}
+            on_text:
+                self.focus = not self.focus if self.text.endswith("\n") else self.focus
+
+        TextInput:
+            id: login_password
+            password: True
+            hint_text: "Password"
+            size_hint: .8, .1
+            pos_hint: {"top": .7, "right" :.9}
+
+        Label:
+            id: login_message
+            color: (1,0,0,1)
+            size_hint: .8, .1
+            pos_hint: {"top": .4, "right" :.9}
+
+        Button:
+            text: "Login"
+            size_hint: .8, .1
+            pos_hint: {"top": .35, "right": .9}
+            on_release: app.root.get_screen('login').sign_in_existing_user(login_email.text, login_password.text)
+
+
+        LabelButton:
+            canvas.before:
+                Color:
+                    rgb: get_color_from_hex("#35477d") if self.state == 'normal' else get_color_from_hex("#3244AA")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            text: "[u]Sign up"
+            markup: True
+            size_hint: .8, .1
+            pos_hint: {"top": .2, "right" :.9}
+            on_release:
+                app.root.get_screen('login').sign_up(login_email.text, login_password.text)

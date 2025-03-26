@@ -1,0 +1,69 @@
+#:import utils kivy.utils
+
+
+<MainScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: get_color_from_hex("#39B3F2")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            #put two W icons here
+            rows:1
+            pos_hint:{"top":1,"left":1}
+            size_hint:1,.05
+            Image:
+                source: "icons/eyegym.png"
+            Image:
+                source: "icons/eyeglass.png"
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.95,"left":1}
+            size_hint:1,.2
+            #put two icons and avatar icon
+            Image:
+                source: "icons/eyeball.png"
+            Image:
+                source: "icons/gymingeye.png"
+                id: avatar_image
+            Image:
+                source: "icons/happyeye.png"
+        Label:
+            #streak label
+            pos_hint: {"top": .7, "left": 1}
+            size_hint: 1, .1
+            text: "Welcome To Vision Therapy"
+            id: streak_label
+        GridLayout:
+            #mid grid
+            id: banner_grid
+            rows:1
+            pos_hint:{"top": .6, "left": 1}
+            size_hint: 1, .3
+            Button:
+                background_normal: "icons/stereoicon.png"
+                on_press: app.root.current = "exercise_screen"
+            Button:
+                background_normal: "icons/penicon.png"
+                on_press: app.root.current = "pencil_screen"
+        GridLayout:
+            #add 3 menu buttons
+            rows: 1
+            pos_hint: {"top": .2, "left": 1}
+            size_hint: 1, .2
+            Button:
+
+                background_normal: "icons/setticon.png"
+                on_press: app.root.current = "settings_screen"
+            Button:
+
+                background_normal: "icons/calendar.png"
+                on_press: app.root.current = "calendar_screen"
+            Button:
+
+                background_normal: "icons/logouticon.png"
+                on_press: app.root.current = "login"
+
+
