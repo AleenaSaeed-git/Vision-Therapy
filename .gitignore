@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local files
+*.log
+user_session.json
+refresh_token.json
+exercise_progress.json
+firebase_service_key.json
+stereogram-eye-exercise-firebase-adminsdk-fbsvc-d418c39993.json
+
+# OS
+.DS_Store
+Thumbs.db 
