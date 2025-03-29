@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "stereogram-eye-exercise",
+  "private_key_id": "16f67a7e951db145a68bd4ee4e07a6cb930057ad",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZN+PlRiMDOOgf\nbmmIC6ira0Yw9OhRyHELhGMjhyqtTECTfuPwBLs/iNtIat1WR+8cqFUDFa6Cj23k\nV/hz5eBPIwDH8Koi9tRqmDYJxevIiqqJzCNP+ekQkeRwGDiuxNq3MeCkSbcNaOVG\np+TOKRhlpckYh04EZQtZ1brB6OwmRJeBC7hCP8YPUzsdsX9aoLujXaavcAVdwlZg\n1mj2MhdlkVrmuoAS+Xwxz28Kb8iad0sIxWruJrZW2rX7q79UVA1KpfxreNm/w+fA\nsmFQOKi9WQlgOhc87mAkWwVYTV+z+3CDyWbU8UpiTYTVKy+fJtUzIUf07rzHEWlH\n++8F5jarAgMBAAECggEAAQ+ahg4O8YVivA73f/0cMH4mvepF6jeLtprJoZMXvJH0\nEzEm+HVyQeMV7+dQHnHds2rVEEQX8c/oIWawMkZSQqcXai9jcIx6r1L//8TSNbM+\n4v5p9VckpS3GCym37Ftn/N+tZIM7Qo41GuCK2w25u0fEhC5BAMxKvzN7WCNRmykI\n5r+VJPsly1CQN9lP4+eIqbXoG0+YH2z8vOZAzfDVdBnzqCqX8mKqXZrploh7lJDg\nFhRJ9xND+y6g5vgUJhdWeUOjGEmSsPTY4i1R4urLGW8b66ctcm/eXdBmYQSZKPU9\ntwikBpAv7R6LVcmDpMZxZQZei0ZqE97/2EDVBZgHxQKBgQDz8XErYMZQlOqDGUhi\nHZrDJyWEBJZgc9yHzKhsbpc7KT1PwIV98JTIr/kcKsun+0E4FMzyc/VySGAvM4HZ\nUZCrjOtsxwDcxnqwoI2Vzl4RyIApU+50FFvQneJ7u58cxzimom4g691I96UGUsV2\nWh6USkOV3MGAcVlzN/qFSYpBpwKBgQDj9E4Zlfv/dxWEvlQMq5wHpRxey2Y2nLa7\nE1jZlePNVQlM38npR2l1eFZy/LIIRUZY4zIY2xj9ACfDzgRgPJiLFiwoiPuk5dJC\ns9rY6dZq8sLWpCtoSQekLDS5bDvqMATenSxcOGcwHefe7x+4jvCa6EFKF2kDzdwE\nannLmrpbXQKBgBIsADQtB1jlXvrZHU1By0+SUPceqF0TBHCRTFKXgmiDz+9q9gbF\nry+r/DCe94DR9K/KzOGaxcP3pEKf4aJgsxg0bS0zPds0ZdtWenWYY+WLPBDYEcFP\n6u8Fc+OnvFiWdp/jJbUKHPfcisyHyfHhELoXNiWpxjhdOT6eAul+6u+tAoGATyh5\nLn1c4tuRh2UofrXhGu6FKY3sUq6c7d3MDtL0JkuPTTixPubjgj1ll8yUbjbQNPHA\nZc0/oiu5o08ZSeoA9tuePf1DlYGRQESAjK63HLBsZGjiAfbKRoJrVLB3Jd3C8yMV\nUnjrrFPWPx4+n7JTbxeUBIyYlQ+ZhZcL8F4stKkCgYEA6GI/VdYK7VjVLZGJJBO4\niyqctiah4WkokqgMYsE+H8idJQQiH4R/Z2WXSXrzGS2r0V76pnQMQ9dgxL7bIfUL\ntjAYmWG1N++JhUcJh/vg8XxmlMMh2lBAcL2HDzDcFT9KPGbKX9cYPPtt77bm7qQG\nX2DvGaxbpq78xDe2ceClzsI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@stereogram-eye-exercise.iam.gserviceaccount.com",
+  "client_id": "107878963438492706969",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40stereogram-eye-exercise.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
