@@ -14,13 +14,7 @@ A Kivy-based application for vision therapy exercises, featuring Firebase integr
 - Push Notifications for Exercise Reminders
 - Firebase Integration for Data Storage
 
-## Prerequisites
-
-- Python 3.8 or higher
-- Firebase project with Cloud Messaging enabled
-- Firebase service account key
-
-## Installation
+## Quick Start Guide
 
 1. Clone the repository:
 ```bash
@@ -39,41 +33,62 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Set up Firebase:
-   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
-   - Enable Authentication and Cloud Firestore
-   - Download your service account key and save it as `firebase_service_key.json` in the project root
-
-## Configuration
-
-1. Firebase Setup:
-   - Place your `firebase_service_key.json` in the project root
-   - The file should contain your Firebase service account credentials
-
-2. Notification Settings:
-   - Go to Settings → Customize Notification Time
-   - Enter your preferred reminder time in HH:MM format (24-hour)
-
-## Usage
-
-1. Start the application:
+4. Run the application:
 ```bash
 python main.py
 ```
 
-2. User Registration/Login:
-   - Create a new account or log in with existing credentials
-   - Your progress will be saved to Firebase
+## Important Files and Their Purposes
 
-3. Exercise Sessions:
-   - Choose between Stereogram or Pencil Push-up exercises
-   - Set your preferred duration in Settings
-   - Follow on-screen instructions
-   - Track your progress in the Calendar view
+1. `firebase_service_key.json`:
+   - Contains Firebase service account credentials
+   - Required for Firebase authentication and database access
+   - Already included in the repository for easy setup
 
-4. Notifications:
-   - Set up exercise reminders in the Notification settings
-   - Receive push notifications at your specified time
+2. `user_session.json`:
+   - Stores user login information
+   - Created automatically when you first log in
+   - Contains your FCM token for notifications
+
+3. `exercise_progress.json`:
+   - Saves your exercise progress locally
+   - Created automatically when you start exercises
+   - Helps resume exercises if the app is closed
+
+4. `refresh_token.json`:
+   - Stores Firebase authentication refresh token
+   - Created automatically during login
+   - Helps maintain your login session
+
+## Firebase Configuration
+
+The application is pre-configured with Firebase settings. The following files contain the necessary configuration:
+
+1. `firebase_service_key.json`:
+   - Contains the service account credentials
+   - Already included in the repository
+   - No changes needed
+
+2. Firebase API Key in `main.py`:
+   - Pre-configured with the project API key
+   - No changes needed
+
+## Common Issues and Solutions
+
+1. "Firebase Authentication Error":
+   - Make sure you have an active internet connection
+   - Try logging out and logging back in
+   - Check if the Firebase service is running
+
+2. "Notification Not Working":
+   - Check if notifications are enabled in your system settings
+   - Try setting a new reminder time
+   - Make sure the app is running in the background
+
+3. "Exercise Timer Not Working":
+   - Check if the app has focus
+   - Try restarting the exercise
+   - Make sure your system time is correct
 
 ## Project Structure
 
@@ -87,49 +102,37 @@ Vision-Therapy/
 ├── fcm_token_manager.py   # FCM token management
 ├── auth_utils.py          # Authentication utilities
 ├── requirements.txt       # Project dependencies
+├── firebase_service_key.json  # Firebase service account key
 └── .gitignore            # Git ignore rules
 ```
 
-## Firebase Integration
+## Usage Guide
 
-The application uses Firebase for:
-- User Authentication
-- Data Storage (exercise history, settings)
-- Push Notifications
+1. First Time Setup:
+   - Run the application using `python main.py`
+   - Create a new account or log in
+   - The app will automatically set up all necessary files
 
-Make sure to:
-1. Enable Email/Password authentication in Firebase Console
-2. Set up Cloud Firestore database
-3. Configure Cloud Messaging for notifications
+2. Exercise Sessions:
+   - Choose between Stereogram or Pencil Push-up exercises
+   - Set your preferred duration in Settings
+   - Follow on-screen instructions
+   - Track your progress in the Calendar view
 
-## Troubleshooting
-
-1. Firebase Connection Issues:
-   - Verify your `firebase_service_key.json` is present and valid
-   - Check your internet connection
-   - Ensure Firebase services are enabled in your project
-
-2. Notification Problems:
-   - Check notification permissions
-   - Verify FCM token is properly saved
-   - Ensure correct time format in settings
-
-3. Exercise Timer Issues:
-   - Check if exercise duration is set correctly
-   - Verify Firebase connection for saving progress
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+3. Notifications:
+   - Go to Settings → Customize Notification Time
+   - Enter your preferred reminder time (HH:MM format)
+   - Save the settings
+   - You'll receive notifications at the specified time
 
 ## Support
 
-For support, please open an issue in the GitHub repository or contact the maintainers. 
+For support or questions:
+1. Check the Common Issues section above
+2. Make sure all required files are present
+3. Verify your internet connection
+4. Contact the maintainers if issues persist
+
+## Note
+
+This repository contains all necessary configuration files for immediate use. No additional setup is required beyond installing the dependencies and running the application. 
